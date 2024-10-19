@@ -39,6 +39,11 @@ form.addEventListener('submit', function(event) {
 
 // Add grocery item to the table
 function addGroceryToTable(item) {
+    // sanity check
+    if(!item || !item.itemName || !item.category || !item.quantity || !item.price || !item.totalItemCost) {
+        console.error('Invalid item object passed to addGroceryToTable');
+        return;
+    }
     const row = document.createElement('tr');
     row.innerHTML = `
         <td>${item.itemName}</td>
