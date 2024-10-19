@@ -33,6 +33,9 @@ form.addEventListener('submit', function(event) {
     // Add item to the table
     addGroceryToTable({ itemName, category, quantity, totalItemCost });
 
+    //update pantry table 
+    updatePantryTable({itemName, category, quantity, totalItemCost});
+
     // Clear the form
     form.reset();
 });
@@ -54,7 +57,6 @@ function addGroceryToTable(item) {
         <td><button class="check-off">Check Off</button></td>
     `;
     groceryTableBody.appendChild(row);
-    console.log("hi");
     console.log("Grocery list array:", groceries);
 
     // Handle check-off button click
