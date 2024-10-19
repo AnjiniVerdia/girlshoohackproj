@@ -54,6 +54,7 @@ function addGroceryToTable(item) {
         <td><button class="check-off">Check Off</button></td>
     `;
     groceryTableBody.appendChild(row);
+    console.log("hi");
     console.log("Grocery list array:", groceries);
 
     // Handle check-off button click
