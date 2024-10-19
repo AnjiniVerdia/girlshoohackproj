@@ -18,7 +18,7 @@ form.addEventListener('submit', function(event) {
     // Get values from input fields
     const itemName = document.getElementById('item-name').value;
     const category = document.getElementById('category').value;
-    const quantity = parseInt(document.getElementById('quantity').value);
+    const quantity = parseInt(document.getElementById('quantity').value);   
     const price = parseFloat(document.getElementById('price').value);
 
     // Calculate total cost for the item
@@ -49,6 +49,7 @@ function addGroceryToTable(item) {
         <td><button class="check-off">Check Off</button></td>
     `;
     groceryTableBody.appendChild(row);
+    console.log("Grocery list array:", groceries);
 
     // Handle check-off button click
     row.querySelector('.check-off').addEventListener('click', function() {
